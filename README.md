@@ -1,8 +1,7 @@
 Nous avons eu pour but de creer une API REST nous permettant de faciliter la gestion d'une médiathéque pour cela nous avons réalisé l'API avec le framework symfony3 ainsi qu’un site servant à la démonstration de cette API ( également en symfony 3 ).
 
 Prérequis :
-.avoir installer composer.
-.avoir un wampp/xampp/lampp afin d'avoir un serveur apache.
+avoir installer composer et avoir un wampp/xampp/lampp afin d'avoir un serveur apache.
 
 Consigne d’installation :
 
@@ -52,7 +51,6 @@ fichier : MediathequeBundle/Resources/condig/validation.yml
 - Pour la table des emprunts, un livre ne peut apparaître qu'une seule et unique fois.
 
 Les différentes url de l'API :
-
 -Méthode GET:
 .http://localhost/rest_api/web/app_dev.php/books  (récupère tous les livres)
 .http://localhost/rest_api/web/app_dev.php/books/{id livre} (récupère les détails du livre dont l'id est passé en paramètre)
@@ -76,7 +74,6 @@ http://localhost/rest_api/web/app_dev.php/members/{id membre}
 Attention quelques erreurs ne sont pas gérées dans le site de démonstration. Il faut :
 -Prendre en compte le fait que le nom d'un livre doit être unique (que ce soit pour les méthodes POST et PUT)
 -Impossibilité de DELETE un utilisateur ou un livre qui est dans la table Borrowing 
-
 
 documentation demo_rest:
 
