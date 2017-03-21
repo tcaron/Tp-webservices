@@ -1,9 +1,8 @@
-Nous avons eu pour but de creer une API REST nous permettant de faciliter la gestion d'une médiathéque pour cela nous avons réalisé l'API avec le framework symfony3 ainsi 
-qu’un site servant à la démonstration de cette API ( également en symfony 3 ).
+Nous avons eu pour but de creer une API REST nous permettant de faciliter la gestion d'une médiathéque pour cela nous avons réalisé l'API avec le framework symfony3 ainsi qu’un site servant à la démonstration de cette API ( également en symfony 3 ).
 
 Prérequis :
--avoir installer composer
--avoir un wampp/xampp/lampp afin d'avoir un serveur apache
+.avoir installer composer.
+.avoir un wampp/xampp/lampp afin d'avoir un serveur apache.
 
 Consigne d’installation :
 
@@ -25,9 +24,9 @@ Toute les méthodes du code sont documentées.
 Documentation rest_api:
 
 Utilisation du bundle FOSRestBundle : Ce bundle aider à créer des api RESTful plus rapidement avec Symfony, il va par exemple:
--générer des routes conforme aux standards REST
--décoder les requêtes http toujours en respectant les standards REST
--Gérer correction les différents codes statuts HTTP. 
+.générer des routes conforme aux standards REST.
+.décoder les requêtes http toujours en respectant les standards REST.
+.Gérer correction les différents codes statuts HTTP. 
 
 Les routings générés par le bundle ne se trouve pas dans le fichier routing.yml du bundle comme d'habitude mais au-dessus des fonctions sous format @Annotations
 
@@ -37,9 +36,9 @@ Entités Borrowing , Members et Books ( se trouvent dans MediathequeBundle/Entit
 Les entités vont nous permettre de travailler avec des objets directement (et non avec notre base de données via des requêtes). Toute les méthodes sont des set et des get.
  
 Nos différents contrôleurs, qui vont nous permettre de traiter nos objets pour ensuite les envoyer dans nos vues sont dans MediathequeBundle/Controller, on va retrouver 3 fichiers:
--BooksController -> méthodes qui vont traiter les différents objets Books.
--MembersController -> méthodes qui vont traiter les différents objets Members.
--BorrowingController -> méthodes qui vont traiter les différents objets Borrowing.
+.BooksController -> méthodes qui vont traiter les différents objets Books.
+.MembersController -> méthodes qui vont traiter les différents objets Members.
+.BorrowingController -> méthodes qui vont traiter les différents objets Borrowing.
 
 Pour Books et Members, la plupart des méthodes ont le même rôle récupérer, mettre à jour et supprimer.
 Pour Borrowing, on a une méthode pour récupérer les livre emprunter par un membre et une autre méthode pour récupérer tout les livres qui sont empruntés.
@@ -55,27 +54,26 @@ fichier : MediathequeBundle/Resources/condig/validation.yml
 Les différentes url de l'API :
 
 -Méthode GET:
-http://localhost/rest_api/web/app_dev.php/books  (récupère tous les livres)
-http://localhost/rest_api/web/app_dev.php/books/{id livre} (récupère les détails du livre dont l'id est passé en paramètre)
-http://localhost/rest_api/web/app_dev.php/members (récupère tous les membres)
-http://localhost/rest_api/web/app_dev.php/members/{id membre} (récupère les détails du membre dont l'id est passé en paramètre)
-http://localhost/rest_api/web/app_dev.php/borrowing (récupère les livres empruntés)
-http://localhost/rest_api/web/app_dev.php/members/{id membre}/books (récupère les livres empruntés pour le membre passé en paramètre)
+.http://localhost/rest_api/web/app_dev.php/books  (récupère tous les livres)
+.http://localhost/rest_api/web/app_dev.php/books/{id livre} (récupère les détails du livre dont l'id est passé en paramètre)
+.http://localhost/rest_api/web/app_dev.php/members (récupère tous les membres)
+.http://localhost/rest_api/web/app_dev.php/members/{id membre} (récupère les détails du membre dont l'id est passé en paramètre)
+.http://localhost/rest_api/web/app_dev.php/borrowing (récupère les livres empruntés)
+.http://localhost/rest_api/web/app_dev.php/members/{id membre}/books (récupère les livres empruntés pour le membre passé en paramètre)
 
 -Méthode POST:
-http://localhost/rest_api/web/app_dev.php/books
-http://localhost/rest_api/web/app_dev.php/members
+.http://localhost/rest_api/web/app_dev.php/books
+.http://localhost/rest_api/web/app_dev.php/members
 
 - Méthode PUT:
-http://localhost/rest_api/web/app_dev.php/books/{id livre}
-http://localhost/rest_api/web/app_dev.php/members/{id membre}
+.http://localhost/rest_api/web/app_dev.php/books/{id livre}
+.http://localhost/rest_api/web/app_dev.php/members/{id membre}
 
 - Méthode DELETE:
 http://localhost/rest_api/web/app_dev.php/books/{id livre}
 http://localhost/rest_api/web/app_dev.php/members/{id membre}
 
-Attention quelques erreurs ne sont pas gérées dans le site de démonstration.
--Il faut :
+Attention quelques erreurs ne sont pas gérées dans le site de démonstration. Il faut :
 -Prendre en compte le fait que le nom d'un livre doit être unique (que ce soit pour les méthodes POST et PUT)
 -Impossibilité de DELETE un utilisateur ou un livre qui est dans la table Borrowing 
 
