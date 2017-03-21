@@ -5,7 +5,7 @@ Prérequis :
 > avoir installer composer 
 >avoir un wampp/xampp/lampp afin d'avoir un serveur apache.
 
-Consigne d’installation :
+Consignes d’installation :
 
 **Pour chacun des dossiers :**
 >aller dans chacun des dossiers, ouvrez un invité de commande (ou un git bash par exemple) et faire : php composer update (ou php composer.phar update selon l'invité de commande)
