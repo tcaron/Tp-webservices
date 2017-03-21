@@ -14,7 +14,7 @@ Pour chacun des dossiers :
 . php bin/console doctrine:fixtures:load (pour remplir notre base de données, les valeurs et le code sont dans rest_api/src/MediathequeBundle/Datafixtures/ORM/LoadMediathequeData.php)
 ( Données générées pour des membres, des livres et des emprunts )
 - pour le dossier demo_rest UNIQUEMENT :
-Si erreur de css/js non chargé, faire php bin/console assets:install 
+.faire php bin/console assets:install 
 
 
 Toute les méthodes du code sont documentées.

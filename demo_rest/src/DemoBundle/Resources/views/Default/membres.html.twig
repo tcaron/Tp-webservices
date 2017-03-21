@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<div class="test">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"> <a href="{{ path('demo_homepage') }}"> Mediathéque</a></h2>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Nos membres</h1>
+                    <p>Cliquer sur le nom d'un de nos membres pour voir les livres qu'il a empruntés</p>
+                    <table>
+                        <tr>
+                            <td>Noms</td>
+
+                        </tr>
+                       
+                            {% for membre in membres %}
+                            <tr> <td><a href="{{ path('demo_membre', {'id':membre.id}) }}" style="color:#00C5CD;">{{ membre.name }}</a></td> </tr>
+                            {%  endfor %}
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

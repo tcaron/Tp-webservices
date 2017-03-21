@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<div class="test">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"> <a href="{{ path('demo_homepage') }}"> Mediathéque</a></h2>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Détail d'un membre</h1>
+                   
+                    <table>
+                        <tr><td>Livre(s) emprunté(s)</td></tr>
+                
+                        {% if emprunts.message is defined %}
+                            <tr><td>{{ emprunts.message }}</td><tr>      
+                        {% else %}
+                            {% for emprunt in emprunts %}
+                                <tr><td>{{ emprunt.livre }}</td><tr>                          
+                            {% endfor %}
+                        {% endif %}
+                        
+                    </table>
+
+
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

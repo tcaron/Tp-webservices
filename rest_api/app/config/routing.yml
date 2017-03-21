@@ -1,0 +1,15 @@
+mediatheque:
+    resource: "@MediathequeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+books:
+    type:     rest
+    resource: MediathequeBundle\Controller\BooksController
+
+members:
+    type:     rest
+    resource: MediathequeBundle\Controller\MembersController
+
+borrowing:
+    type:     rest
+    resource: MediathequeBundle\Controller\BorrowingController

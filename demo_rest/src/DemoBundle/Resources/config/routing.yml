@@ -1,0 +1,31 @@
+demo_homepage:
+    path:     /
+    defaults: { _controller: DemoBundle:Default:index }
+
+demo_contact:
+    path:     /contact
+    defaults: { _controller: DemoBundle:Default:contact }
+
+demo_livres:
+    path:     /livres
+    defaults: { _controller: DemoBundle:Default:livres }
+
+demo_membres:
+    path:     /membres
+    defaults: { _controller: DemoBundle:Default:membres }
+
+demo_membre:
+    path:     /membre/{id}
+    defaults: { _controller: DemoBundle:Default:membre }
+
+demo_livre:
+    path:     /livre/{id}
+    defaults: { _controller: DemoBundle:Default:livre }
+
+demo_deletelivre:
+    path: /livre/delete/{id}
+    defaults: { _controller: DemoBundle:Default:livre }
+
+demo_creationlivre:
+    path:     /creation_livre
+    defaults: { _controller: DemoBundle:Default:creerLivre }

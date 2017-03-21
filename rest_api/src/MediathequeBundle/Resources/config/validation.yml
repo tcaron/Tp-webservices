@@ -1,0 +1,20 @@
+MediathequeBundle\Entity\Books:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+        category:
+            - NotBlank: ~
+            - Type: string
+
+MediathequeBundle\Entity\Members:
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+
+MediathequeBundle\Entity\Borrowing:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: book

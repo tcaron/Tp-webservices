@@ -1,0 +1,3 @@
+mediatheque_homepage:
+    path:     /
+    defaults: { _controller: MediathequeBundle:Default:index }

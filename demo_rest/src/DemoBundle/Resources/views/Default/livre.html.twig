@@ -1,0 +1,47 @@
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<div class="test">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"> <a href="{{ path('demo_homepage') }}"> Mediathéque</a></h2>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Détail d'un livre</h1>
+                    {%  for l in livre %}
+                       <p>id : {{ l.id }}</p>
+                        <p>nom : {{ l.name }}</p>
+                        <p>Categorie : {{ l.category }}</p>
+
+                        <b> ----------------------------------- </b>
+
+                        <p>Mettre à jour le livre</p>
+                        {{ form_start(maj) }}
+                        {{ form_row(maj.name, {'value': l.name }) }}
+                        {{ form_row(maj.category,{'value': l.category }) }}
+                        {{ form_rest(maj) }}
+                        {{ form_end(maj) }}
+                    {%  endfor %}
+
+                    <b> ----------------------------------- </b>
+                    {{ form(delete) }}
+
+
+
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

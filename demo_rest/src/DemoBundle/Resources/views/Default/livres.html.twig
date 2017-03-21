@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<div class="test">
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h2 class="masthead-brand"> <a href="{{ path('demo_homepage') }}"> Mediathéque</a></h2>
+
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <h1 class="cover-heading">Nos livres</h1>
+                    <a><a href="{{ path('demo_creationlivre') }}" style="color:#00C5CD;">Creer un nouveau livre</a></a></p>
+                    <p>Cliquez sur le nom d'un livre pour obtenir plus de détails</p>
+                    <table>
+                        <tr>
+                            <td>Nom du livre </td>
+                            <td>Catégorie</td>
+                        </tr>
+
+                    {%  for livre in livres %}
+                        <tr>
+                            <td><a href="{{ path('demo_livre',{'id':livre.id }) }}"style="color:#00C5CD;">{{ livre.name }}</a></td>
+                            <td>{{ livre.category }}</td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
