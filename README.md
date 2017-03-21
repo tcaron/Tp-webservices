@@ -68,8 +68,8 @@ Les différentes url de l'API :
 .http://localhost/rest_api/web/app_dev.php/members/{id membre}
 
 - Méthode DELETE:
-http://localhost/rest_api/web/app_dev.php/books/{id livre}
-http://localhost/rest_api/web/app_dev.php/members/{id membre}
+.http://localhost/rest_api/web/app_dev.php/books/{id livre}
+.http://localhost/rest_api/web/app_dev.php/members/{id membre}
 
 Attention quelques erreurs ne sont pas gérées dans le site de démonstration. Il faut :
 -Prendre en compte le fait que le nom d'un livre doit être unique (que ce soit pour les méthodes POST et PUT)
@@ -88,7 +88,6 @@ Les vues sont dans DemoBundle/Views/Default
 
 Pour lancer le site http://localhost/demo_rest/web/app_dev.php/
 
-Thomas Caron
-Alexandre Gambart
+Thomas Caron & Alexandre Gambart
 
 
