@@ -9,8 +9,8 @@ Nous avons eu pour but de creer une API REST nous permettant de faciliter la ges
 ## Consignes d’installation :
 
 **Pour chacun des dossiers :**
->aller dans chacun des dossiers, ouvrez un invité de commande (ou un git bash par exemple) et faire : 
-- php composer update (ou php composer.phar update selon l'invité de commande)
+> aller dans chacun des dossiers, ouvrez un invité de commande (ou un git bash par exemple) et faire : 
+> - php composer update (ou php composer.phar update selon l'invité de commande)
  
 **Pour le dossier rest_api UNIQUEMENT :** 
 > - php bin/console doctrine:database:create (afin de créer la base de donnée, attention de bien avoir un serveur apache de lancé)
@@ -35,9 +35,9 @@ Entités Borrowing , Members et Books ( se trouvent dans MediathequeBundle/Entit
 Les entités vont nous permettre de travailler avec des objets directement (et non avec notre base de données via des requêtes). Toute les méthodes sont des set et des get.
  
 Nos différents contrôleurs, qui vont nous permettre de traiter nos objets pour ensuite les envoyer dans nos vues sont dans MediathequeBundle/Controller, on va retrouver 3 fichiers:
->BooksController -> méthodes qui vont traiter les différents objets Books.
->MembersController -> méthodes qui vont traiter les différents objets Members.
->BorrowingController -> méthodes qui vont traiter les différents objets Borrowing.
+> - BooksController -> méthodes qui vont traiter les différents objets Books.
+> - MembersController -> méthodes qui vont traiter les différents objets Members.
+> - BorrowingController -> méthodes qui vont traiter les différents objets Borrowing.
 
 Pour Books et Members, la plupart des méthodes ont le même rôle récupérer, mettre à jour et supprimer.
 Pour Borrowing, on a une méthode pour récupérer les livre emprunter par un membre et une autre méthode pour récupérer tout les livres qui sont empruntés.
@@ -88,6 +88,8 @@ Le contrôleur par défaut est dans DemoBundle/Controller
 Les vues sont dans DemoBundle/Views/Default
 
 Pour lancer le site http://localhost/Tp-webservices/demo_rest/web/app_dev.php/
+
+** Ne pas changer les dossiers de place, sinon les liens seront modifiés si c'est le cas, changer la base_url de l'api dans config.yml de demo_rest **
 
 ## Auteurs
 
