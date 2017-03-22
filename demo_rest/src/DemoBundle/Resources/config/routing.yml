@@ -29,3 +29,7 @@ demo_deletelivre:
 demo_creationlivre:
     path:     /creation_livre
     defaults: { _controller: DemoBundle:Default:creerLivre }
+
+demo_creationMembre:
+    path:     /creation_membre
+    defaults: { _controller: DemoBundle:Default:creerMembre }

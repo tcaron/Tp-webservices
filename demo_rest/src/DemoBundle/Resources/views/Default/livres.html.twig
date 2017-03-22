@@ -28,6 +28,14 @@
                         </tr>
                     {% endfor %}
                     </table>
+
+                  <table>
+                   <tr><td>Livres actuellement empruntés</td></tr>
+                   {% for emprunt in emprunts %}
+                   <tr><td>{{ emprunt.livre }}</td></tr>
+                   {% endfor %}
+             
+                  </table>      
                 </div>
 
                 <div class="mastfoot">

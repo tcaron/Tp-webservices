@@ -17,6 +17,9 @@ Nous avons eu pour but de creer une API REST nous permettant de faciliter la ges
 > - php bin/console doctrine:schema:update --force (afin de créer nos tables)
 > - php bin/console doctrine:fixtures:load (pour remplir notre base de données, les valeurs et le code sont dans >rest_api/src/MediathequeBundle/Datafixtures/ORM/LoadMediathequeData.php) ( Données générées pour des membres, des livres et des emprunts )
 
+**Emprunts générés:**
+> - Thomas : le seigneur des anneaux, le retour du roi et Berserk
+> - Marie : Père Goriot
 
 **Toute les méthodes du code sont documentées.**
 
@@ -89,7 +92,7 @@ Les vues sont dans DemoBundle/Views/Default
 
 Pour lancer le site http://localhost/Tp-webservices/demo_rest/web/app_dev.php/
 
-** Ne pas changer les dossiers de place, sinon les liens seront modifiés si c'est le cas, changer la base_url de l'api dans config.yml de demo_rest **
+**Ne pas changer les dossiers de place, sinon les liens seront modifiés si c'est le cas, changer la base_url de l'api dans config.yml de demo_rest**
 
 ## Auteurs
 

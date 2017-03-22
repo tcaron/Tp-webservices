@@ -34,15 +34,18 @@ class DefaultController extends Controller
 
     /**
      * Affiche tout les livres
+     * Affiche tout les emprunts
      * @return twig template
      */
     public function livresAction(){
         $client   = $this->get('guzzle.client.api_crm');
+
         $response = $client->get('books');
+        $response2= $client->get('borrowing');
 
         $result = \GuzzleHttp\json_decode($response->getBody()->getContents());
-
-        return $this->render('DemoBundle:Default:livres.html.twig',array('livres'=>$result));
+        $result2 = \GuzzleHttp\json_decode($response2->getBody()->getContents());
+        return $this->render('DemoBundle:Default:livres.html.twig',array('livres'=>$result,'emprunts'=>$result2));
     }
 
     /**
@@ -59,9 +62,32 @@ class DefaultController extends Controller
     }
 
     /**
+     * Creer un nouveau membre
+     * @param  Rq     $request [description]
+     * @return twig template
+     */
+    public function creerMembreAction(Rq $request){
+        $data = array();
+        $form = $this->createFormBuilder($data)
+            ->add('name',TextType::class)
+            ->add('valider',SubmitType::class)
+        ->getForm();
+        $client   = $this->get('guzzle.client.api_crm');
+        if($request->isMethod("POST")){
+          $form->handleRequest($request);
+            $client->request('POST','members',[
+            'json'=>['name'=> $form['name']->getData()]
+            ]);
+            return $this->redirectToRoute('demo_membres');
+
+        }
+        return $this->render('DemoBundle:Default:creation_membre.html.twig',array('form'=>$form->createView()));  
+    }
+
+    /**
      * Affiche pour un membre, la liste des livres qu'il a empruntés
      * @param  Rq
-     * @return [type]
+     * @return twig template
      */
     public function membreAction(Rq $request){
 

@@ -61,7 +61,7 @@ class LoadMediathequeData implements FixtureInterface
         $manager->persist($book4);
 
         $book5 = new Books();
-        $book5->setName('Bersek');
+        $book5->setName('Berserk');
         $book5->setCategory('Manga');
         $manager->persist($book5);
 
