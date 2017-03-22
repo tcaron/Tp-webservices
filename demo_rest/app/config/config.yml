@@ -76,7 +76,7 @@ guzzle:
 
     clients:
         api_payment:
-            base_url: "http://localhost/rest_api/web/app_dev.php/"
+            base_url: "http://localhost/Tp-webservices/rest_api/web/app_dev.php/"
 
             # custom headers (@deprecated, will be removed in v6; new: "headers" in options (see below))
             headers:
@@ -84,6 +84,6 @@ guzzle:
 
 
         api_crm:
-            base_url: "http://localhost/rest_api/web/app_dev.php/"
+            base_url: "http://localhost/Tp-webservices/rest_api/web/app_dev.php/"
             headers:
                 Accept: "application/json"
