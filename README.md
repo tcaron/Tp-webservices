@@ -1,6 +1,10 @@
 ## Préambule
 Nous avons eu pour but de creer une API REST nous permettant de faciliter la gestion d'une médiathéque pour cela nous avons réalisé l'API avec le framework symfony3 ainsi qu’un site servant à la démonstration de cette API ( également en symfony 3 ).
 
+Pourquoi avoir choisi Symfony ?
+- Connaissance du Framework et du langage PHP
+- Approfondir les connaissances
+
 ## Prérequis :
 
 > - avoir installer composer 
@@ -93,6 +97,12 @@ Les vues sont dans DemoBundle/Views/Default
 Pour lancer le site http://localhost/Tp-webservices/demo_rest/web/app_dev.php/
 
 **Ne pas changer les dossiers de place, sinon les liens seront modifiés si c'est le cas, changer la base_url de l'api dans config.yml de demo_rest**
+
+## Gestion de projet
+
+Nous avons opté pour une gestion simple via une feuille de calcul sur Google Drive
+
+![Gestion de projet](http://img4.hostingpics.net/pics/347197gestionprojetAPI.png)
 
 ## Auteurs
 
